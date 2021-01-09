@@ -25,13 +25,7 @@ const cleanup = () => {
     console.info("deleted fallback file")
   } catch (error) {
     console.error("nothing to delete")
-  }
-  try {
-    fs.unlinkSync(current)
-    console.info("deleted current file")
-  } catch (error) {
-    console.error("nothing to delete")
-  }
+  }   
 }
 
 /**
@@ -39,7 +33,7 @@ const cleanup = () => {
  * @param  {} fallbackConfig -> path to the fallback config !!Should only trigger if currenConfig not specified
  * @param  {} currentConfig -> path to the current config !!Should always trigger before fallback
  */
-module.exports = async function (API, fallbackConfig, currentConfig) {
+module.exports = async function (API, fallbackConfig) {
   try {
     changeDir()
     cleanup()
@@ -47,14 +41,7 @@ module.exports = async function (API, fallbackConfig, currentConfig) {
       throw new Error("could not find file at", fallbackConfig)
     }
     console.info("copying fallbackConfig")
-    fs.copyFileSync(fallbackConfig, fallback)
-    if (currentConfig) {
-      if (!fs.existsSync(currentConfig)) {
-        throw new Error("could not find file at", currentConfig)
-      }
-      console.info("copying currentConfig")
-      fs.copyFileSync(currentConfig, current)
-    }
+    fs.copyFileSync(fallbackConfig, fallback)     
     const validationResults = await validator(API);
     console.log(validationResults.errors.length);
     cleanup()
