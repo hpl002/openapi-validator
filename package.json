@@ -1,14 +1,13 @@
 {
   "name": "openapi-validator",
   "version": "1.0.0",
-  "description": "Module that builds directly on IBM/openapi-validator. Offers additional options for specifying the path to .validaterc while also offering option for specifying path to fallback",
+  "description": "Tiny module that wraps IBM/openapi-validator and reads .validaterc directly from file",
   "main": "index.js",
   "author": "Herman Platou",
   "license": "MIT",
   "private": false,
   "dependencies": {
-    "ibm-openapi-validator": "^0.33.1",
-    "openapi-validator": "^0.9.0"
+    "ibm-openapi-validator": "^0.33.1"
   },
   "devDependencies": {
     "@apidevtools/json-schema-ref-parser": "^9.0.6",
