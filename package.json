@@ -2,7 +2,7 @@
   "name": "openapi-validator",
   "version": "1.0.0",
   "description": "Tiny module that wraps IBM/openapi-validator and reads .validaterc directly from file",
-  "main": "index.js",
+  "main": "src/index.js",
   "author": "Herman Platou",
   "license": "MIT",
   "private": false,
