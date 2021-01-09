@@ -49,6 +49,6 @@ module.exports = async function (API, fallbackConfig) {
   } catch (error) {
     cleanup()
     console.error(error);
-    throw new Error(error)
+    throw error
   }
 }

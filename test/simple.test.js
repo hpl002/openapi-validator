@@ -36,5 +36,5 @@ describe("simple tests", async () => {
     } catch (error) {
       error.message.should.equal("could not find .validaterc file");
     }
-  });
+  });   
 });

@@ -15,6 +15,7 @@
     "mocka": "^0.0.1"
   },
   "scripts": {
-    "test": "mocha test"
+    "test": "mocha test",
+    "debug": "mocha --inspect-brk test"
   }
 }
