@@ -13,5 +13,8 @@
     "@apidevtools/json-schema-ref-parser": "^9.0.6",
     "chai": "^4.2.0",
     "mocka": "^0.0.1"
+  },
+  "scripts": {
+    "test": "mocha test"
   }
 }

@@ -38,7 +38,7 @@ module.exports = async function (API, fallbackConfig) {
     changeDir()
     cleanup()
     if (!fs.existsSync(fallbackConfig)) {
-      throw new Error("could not find file at", fallbackConfig)
+      throw new Error("could not find .validaterc file")
     }
     console.info("copying fallbackConfig")
     fs.copyFileSync(fallbackConfig, fallback)     
