@@ -1,5 +1,5 @@
 {
-  "name": "openapi-validator",
+  "name": "hpl002-oap-oats",
   "version": "1.0.0",
   "description": "Tiny module that wraps IBM/openapi-validator and reads .validaterc directly from file",
   "main": "src/index.js",
